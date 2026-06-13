@@ -10,10 +10,9 @@ app.use(express.json());
 
 app.get("/",(req,res) => {
     res.json({
-        message:"Bienvenido a KicksHub API"
-    })
-
-})
+        message:"Bienvenido a KicksHub API"});
+    });
+app.use("/api/products", productRoutes);
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
