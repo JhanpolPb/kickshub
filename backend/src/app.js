@@ -12,6 +12,7 @@ app.use(express.json());
 app.get("/",(req,res) => {
     res.json({
         message:"Bienvenido a KicksHub API"});
+        message:"Tu tienda de Sneakers de confianza"
     });
 
 app.use("/api/products", productRoutes);
