@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const pool = require("../config/database");
+const { use } = require("react");
 
 const register = async (req, res) => {
   try {
@@ -16,6 +17,16 @@ const register = async (req, res) => {
       "INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING id, name, email, role",
       [name, email, hashedPassword]
     );
+
+    const user = result.rows[0];
+    const token = jwt.sign(
+      {id: user.id , email : user.email, role : user.role },
+      
+      process.env.JWT_SECRET,
+      { expiresIn: process.env.JWT_EXPIRES_IN } 
+    );
+
+
     }catch (err) {
     res.status(500).json({ error: "Error en el registro" });
     }
