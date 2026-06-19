@@ -26,6 +26,14 @@ const register = async (req, res) => {
       { expiresIn: process.env.JWT_EXPIRES_IN } 
     );
 
+    
+    const login = async(req,res) =>{
+      try{
+
+      }catch{
+        
+      }
+    }
 
     }catch (err) {
     res.status(500).json({ error: "Error en el registro" });
