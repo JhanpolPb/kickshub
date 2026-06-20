@@ -43,7 +43,10 @@ const register = async (req, res) => {
         return res.status(401).json({error: "Credenciales incorrectas"})
       }
 
-
+      const token = jwt.sign(
+        
+      )
+      
 
 
 
