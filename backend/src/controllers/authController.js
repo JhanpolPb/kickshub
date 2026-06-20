@@ -38,7 +38,12 @@ const register = async (req, res) => {
 
       const user = result.rows[0];
       const validPassword = await bcrypt.compare(password, user.password);
-      
+
+      if (!validPassword){
+        return res.status(401).json({error: "Credenciales incorrectas"})
+      }
+
+
 
 
 
