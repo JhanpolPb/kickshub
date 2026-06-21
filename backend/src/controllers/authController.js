@@ -49,6 +49,10 @@ const register = async (req, res) => {
         {expiresIn: process.env.JWT_EXPIRES_IN},
       );
       
+      res.json({
+        user: {}
+
+      })
 
 
 
