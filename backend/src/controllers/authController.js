@@ -58,3 +58,10 @@ const register = async (req, res) => {
     }
 };
 
+const getMe = async (req,res) => {
+  try{
+
+  }catch{
+
+  }
+};
