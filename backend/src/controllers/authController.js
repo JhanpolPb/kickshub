@@ -1,7 +1,6 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const pool = require("../config/database");
-const { use } = require("react");
 
 const register = async (req, res) => {
   try {
@@ -11,64 +10,67 @@ const register = async (req, res) => {
     if (exists.rows.length > 0) {
       return res.status(400).json({ error: "El email ya está registrado" });
     }
+
     const hashedPassword = await bcrypt.hash(password, 10);
 
-        const result = await pool.query(
+    const result = await pool.query(
       "INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING id, name, email, role",
       [name, email, hashedPassword]
     );
 
     const user = result.rows[0];
     const token = jwt.sign(
-      {id: user.id , email : user.email, role : user.role },
-      
+      { id: user.id, email: user.email, role: user.role },
       process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRES_IN } 
+      { expiresIn: process.env.JWT_EXPIRES_IN }
     );
 
-    
-    const login = async(req,res) =>{
-      try{
-        const { email, password} = req.body;
-        const result = await pool.query ("SELECT * FROM users WHERE email = $1",[email])
-        
-        if (result.rows.length === 0){
-          return res.status(401).json({ error: "Credenciales incorrectas"})
-        }
-
-      const user = result.rows[0];
-      const validPassword = await bcrypt.compare(password, user.password);
-
-      if (!validPassword){
-        return res.status(401).json({error: "Credenciales incorrectas"})
-      }
-
-      const token = jwt.sign(
-        {id: user.id , email: user.email , role: user.role},
-        process.env.JWT_SECRET,
-        {expiresIn: process.env.JWT_EXPIRES_IN},
-      );
-      
-      res.json({
-        user: {id: user.id, name: user.name, email: user.email, role:user.role},
-        token
-      });
-    }catch(err){
-        res.status(500).json({ error: "Error en el login"});
-    }
-};
-
-const getMe = async (req,res) => {
-  try{
-    const result = await pool.query("SELECT id, name, email, role, created_at FROM users WHERE id = $1", [req.user.id]);
-    res.json(result.rows[0]);
-
-
-
-  }catch(err){
-    res.status(500).json({ error: "Error al obtener pefil" });
+    res.status(201).json({ user, token });
+  } catch (err) {
+    res.status(500).json({ error: "Error en el registro" });
   }
 };
 
+const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const result = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
+    if (result.rows.length === 0) {
+      return res.status(401).json({ error: "Credenciales incorrectas" });
+    }
+
+    const user = result.rows[0];
+    const validPassword = await bcrypt.compare(password, user.password);
+    if (!validPassword) {
+      return res.status(401).json({ error: "Credenciales incorrectas" });
+    }
+
+    const token = jwt.sign(
+      { id: user.id, email: user.email, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: process.env.JWT_EXPIRES_IN }
+    );
+
+    res.json({
+      user: { id: user.id, name: user.name, email: user.email, role: user.role },
+      token
+    });
+  } catch (err) {
+    res.status(500).json({ error: "Error en el login" });
+  }
+};
+
+const getMe = async (req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT id, name, email, role, created_at FROM users WHERE id = $1",
+      [req.user.id]
+    );
+    res.json(result.rows[0]);
+  } catch (err) {
+    res.status(500).json({ error: "Error obteniendo perfil" });
+  }
+};
 
 module.exports = { register, login, getMe };
