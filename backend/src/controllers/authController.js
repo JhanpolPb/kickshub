@@ -62,16 +62,13 @@ const getMe = async (req,res) => {
   try{
     const result = await pool.query("SELECT id, name, email, role, created_at FROM users WHERE id = $1", [req.user.id]);
     res.json(result.rows[0]);
-    
 
 
-  }catch{
 
+  }catch(err){
+    res.status(500).json({ error: "Error al obtener pefil" });
   }
 };
 
 
-
-
-
-module.exports = {register, login, getMe};
+module.exports = { register, login, getMe };
