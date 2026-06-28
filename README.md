@@ -1,5 +1,9 @@
 # kickshub
-E-commerce de sneakers
+E-commerce para una tienda de Sneakers
+
+
+
+
 
 Stack:
  Node, Express, React y Postgress SQL
