@@ -58,3 +58,11 @@ const getAdress = async (req, res) => {
     res.status(500).json ({ error: "Error obteniendo direcciones"});
     }
 };
+
+const addAddress = async (req, res) => {
+    try{
+
+    }catch(err){
+        res.status(500).json ({ error: "Error agregando direcciones"});
+    }
+}
