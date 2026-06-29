@@ -49,3 +49,11 @@ const changePassword = async (req, res) => {
 
     }
 };
+
+const getAdress = async (req, res) => {
+    try{
+
+    }catch(err){
+    res.status(500).json ({ error: "Error obteniendo direcciones"});
+    }
+};
