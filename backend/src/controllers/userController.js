@@ -52,7 +52,8 @@ const changePassword = async (req, res) => {
 
 const getAdress = async (req, res) => {
     try{
-
+    const result = await pool.query("SELECT * FROM addresses WHERE user_id = $1 ORDER BY is_default DESC", 
+        [req.user.id]);
     }catch(err){
     res.status(500).json ({ error: "Error obteniendo direcciones"});
     }
