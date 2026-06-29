@@ -34,7 +34,14 @@ const changePassword = async (req, res) => {
             [req.user.id]);
         const user = result.rows[0];
 
+        
         const validPassword = await bcrypt.compare(currentPassword, user.password);
+         if (!validPassword){
+            return res.status(400).json({ error: "Contraseña actual incorrecta"});
+        }
+
+        const hasedPassword = await bcrypt.hash(newPassword, 10);
+        
     }catch (err){
 
     }
