@@ -81,8 +81,13 @@ const addAddress = async (req, res) => {
 
 const deleteAddress = async (req, res) => {
     try{
+    const {id} = req.params;
+    await pool.query("DELETE FROM addresses WHERE id = $1 AND user_id = $2",[id,req.user.id]);
+    res.json({ message: "Dirección eliminada correctamente"});
 
     }catch(err){
         res.status(500).json ({ error: "Error eliminando direccion"})
     }
 };
+
+module.exports = { getProfile, updateProfile, changePassword, getAdress, addAddress, deleteAddress };
