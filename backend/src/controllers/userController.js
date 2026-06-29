@@ -11,4 +11,12 @@ const getProfile= async (req, res) => {
     }catch(err){
         res.status(500).json({ error: "Error obteniendo perfil"});
     }
-}
+};
+
+const updateProfile = async (req, res) => {
+    try{
+
+    }catch (err){
+        res.status(500).json({ error: "Error actualizando perfil"});
+    }
+};
