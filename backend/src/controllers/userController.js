@@ -8,7 +8,7 @@ const getProfile= async (req, res) => {
             [req.user.id]
         );
         res.json(result.rows[0]);
-    }catch{
-
+    }catch(err){
+        res.status(500).json({ error: "Error obteniendo perfil"});
     }
 }
