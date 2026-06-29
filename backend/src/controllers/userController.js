@@ -61,8 +61,28 @@ const getAdress = async (req, res) => {
 
 const addAddress = async (req, res) => {
     try{
+    const { street, city, state, zip_code, country, is_default } = req.body;
+    
+    if (is_default) {
+        await pool.query("UPDATE addresses SET is_default = false WHERE user_id = $1", 
+            [req.user.id]);
+    }
 
+    const result = await pool.query(
+        "INSERT INTO addresses (user_id, street, city, state, zip_code, country, is_default) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *",
+        [req.user.id, street, city, state, zip_code, country, is_default]
+    );
+    res.status(201).json(result.rows[0]
+    )
     }catch(err){
         res.status(500).json ({ error: "Error agregando direcciones"});
     }
-}
+};
+
+const deleteAddress = async (req, res) => {
+    try{
+
+    }catch(err){
+        res.status(500).json ({ error: "Error eliminando direccion"})
+    }
+};
