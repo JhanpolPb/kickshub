@@ -30,6 +30,11 @@ const updateProfile = async (req, res) => {
 const changePassword = async (req, res) => {
     try{
         const { currentPassword, newPassword } = req.body;
+        const result = await pool.query("SELECT password FROM users WHERE id= $1", 
+            [req.user.id]);
+        const user = result.rows[0];
+
+        const validPassword = await bcrypt.compare(currentPassword, user.password);
     }catch (err){
 
     }
