@@ -15,6 +15,12 @@ const getProfile= async (req, res) => {
 
 const updateProfile = async (req, res) => {
     try{
+        const { name, email } = req.body;
+        const result = await pool.query(
+            "UPDATE users SET name=$1, email=$2 WHERE id=$3 RETURNING id, name, email, role, created_at",
+            [name, email, req.user.id]
+        );
+        res.json(result.rows[0]);
 
     }catch (err){
         res.status(500).json({ error: "Error actualizando perfil"});
