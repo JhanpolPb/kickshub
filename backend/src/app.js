@@ -9,15 +9,16 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.get("/",(req,res) => {
-    res.json({
-        message:"Bienvenido a KicksHub API"});
-        message:"Tu tienda de Sneakers de confianza"
-    });
+app.get("/", (req, res) => {
+  res.json({
+    message: "Bienvenido a KicksHub API",
+    description: "Tu tienda de Sneakers de confianza"
+  });
+});
 
 app.use("/api/products", productRoutes);
 app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
-})
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
+});

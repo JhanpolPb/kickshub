@@ -5,6 +5,7 @@ const pool = require("../config/database");
 const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
+    
 
     const exists = await pool.query("SELECT id FROM users WHERE email = $1", [email]);
     if (exists.rows.length > 0) {
