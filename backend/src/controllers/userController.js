@@ -26,3 +26,11 @@ const updateProfile = async (req, res) => {
         res.status(500).json({ error: "Error actualizando perfil"});
     }
 };
+
+const changePassword = async (req, res) => {
+    try{
+        const { currentPassword, newPassword } = req.body;
+    }catch (err){
+
+    }
+};
