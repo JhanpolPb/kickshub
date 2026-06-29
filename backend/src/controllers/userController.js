@@ -41,8 +41,11 @@ const changePassword = async (req, res) => {
         }
 
         const hasedPassword = await bcrypt.hash(newPassword, 10);
-        
+        await pool.query("UPDATE user SET password=$1 WHERE id=$2",[hasedPassword, req.user.id]);
+        res.json({ message: "Contraseña actualizada correctamente"});
+
     }catch (err){
+        res.status(500).json({ error: "Error cambiando contraseña"});
 
     }
 };
