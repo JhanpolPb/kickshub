@@ -5,6 +5,8 @@ E-commerce para una tienda de Sneakers
 
 -Proximo: Desarrollar los demas controladores con sus rutas
 
+-Iniciar Frontend: React
+
 
 
 
