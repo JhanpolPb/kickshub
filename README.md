@@ -9,7 +9,7 @@ E-commerce para una tienda de Sneakers
 -Iniciar Frontend: React
 -Iniciar Vistas
 -Elegir Framework sea nextJs
-
+-Nueva Pasarela de pago
 
 
 
