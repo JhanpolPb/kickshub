@@ -7,6 +7,9 @@ E-commerce para una tienda de Sneakers
 -Proximo: Desarrollar la seccion carrito de compras
 
 -Iniciar Frontend: React
+-Iniciar Vistas
+-Elegir Framework sea nextJs
+
 
 
 
