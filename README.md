@@ -12,6 +12,7 @@ E-commerce para una tienda de Sneakers
 -Nueva Pasarela de pago
 
 -Probar los endpoints de user
+-Postman and Postgress
 
 
 
