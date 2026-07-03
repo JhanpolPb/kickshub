@@ -11,6 +11,7 @@ E-commerce para una tienda de Sneakers
 -Elegir Framework sea nextJs
 -Nueva Pasarela de pago
 
+-Probar los endpoints de user
 
 
 
