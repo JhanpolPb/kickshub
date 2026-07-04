@@ -15,7 +15,7 @@ E-commerce para una tienda de Sneakers
 -Probar los endpoints de user
 -Postman and Postgress
 -Migrar a NextJs 
-
+- Nuevos controllers
 
 Stack:
  Node, Express, React y Postgress SQL
