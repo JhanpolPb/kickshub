@@ -10,6 +10,7 @@ E-commerce para una tienda de Sneakers
 -Iniciar Vistas
 -Elegir Framework sea nextJs
 -Nueva Pasarela de pago
+-Envios y coordinador de Rutas
 
 -Probar los endpoints de user
 -Postman and Postgress
