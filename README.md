@@ -13,7 +13,7 @@ E-commerce para una tienda de Sneakers
 
 -Probar los endpoints de user
 -Postman and Postgress
-
+-Migrar a NextJs 
 
 
 Stack:
