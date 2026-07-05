@@ -61,3 +61,17 @@ const removeFromCart = async (req, res) => {
         res.status(500).json ({ error: "Error  eliminando productos del carrito"});
     }
 };
+
+const clearCart = async (req, res) => {
+    try{
+    const result = await pool.query("DELETE FROM cart_items WHERE id_user = $1 RETURNING *",[req.user.id]);
+
+    if (result.rows.length ===0){
+        res.status(404).json ({ error: "No hay productos en el carrito para eliminar"});
+    }
+    res.json({ message: "Carrito eliminado correctamente"});
+    }catch(err){
+        res.status(500).json ({ error: "Error eliminando productos del carrito"});        }
+};
+
+moduel.exports = { getCart, addToCart, updateCart, removeFromCart, clearCart };
