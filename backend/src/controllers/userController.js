@@ -41,7 +41,7 @@ const changePassword = async (req, res) => {
         }
 
         const hasedPassword = await bcrypt.hash(newPassword, 10);
-        await pool.query("UPDATE user SET password=$1 WHERE id=$2",[hasedPassword, req.user.id]);
+        await pool.query("UPDATE users SET password=$1 WHERE id=$2",[hasedPassword, req.user.id]);
         res.json({ message: "Contraseña actualizada correctamente"});
 
     }catch (err){
@@ -54,6 +54,7 @@ const getAdress = async (req, res) => {
     try{
     const result = await pool.query("SELECT * FROM addresses WHERE user_id = $1 ORDER BY is_default DESC", 
         [req.user.id]);
+    res.json(result.rows);
     }catch(err){
     res.status(500).json ({ error: "Error obteniendo direcciones"});
     }
