@@ -48,10 +48,16 @@ const updateCart= async (req, res) => {
 };
 
 const removeFromCart = async (req, res) => {
-
+    const {id} = req.params;
     try{
-
+    const result = await pool.query ("DELETE FROM cart_items WHERE id_user = $1 AND id_product = $2 RETURNING *",
+    [req.user.id, id]);
+    
+    if (result.rows.length ===0){
+       return res.status(404).json({ error: "Producto no encontrado en el carrito"});
+    }
+    res.json({ message: "Producto eliminado del carrito"});
     }catch(err){
-
+        res.status(500).json ({ error: "Error  eliminando productos del carrito"});
     }
 };
