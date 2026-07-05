@@ -1,10 +1,14 @@
 # kickshub
 E-commerce para una tienda de Sneakers
 
--Seccion Inicio de Sesion, Productos, Usuario (Backend Realizado)
+Realizado:
+-Seccion Inicio de Sesion, Productos, Usuario, Carrito (Backend Realizado)
+-Probados en postman junto con pgAdmin
+
+
 
 -Proximo: Desarrollar los demas controladores con sus rutas
--Proximo: Desarrollar la seccion carrito de compras
+-Proximo: Iniciar y probar en Postman los endpoints
 
 
 -Iniciar Frontend: React
@@ -14,8 +18,6 @@ E-commerce para una tienda de Sneakers
 -Envios y coordinador de Rutas
 -Realizar los Cruds coompletos
 
--Probar los endpoints de user
--Postman and Postgress
 -Migrar a NextJs 
 - Nuevos controllers
 - Realizar la conexion a la base de datos
