@@ -18,6 +18,7 @@ E-commerce para una tienda de Sneakers
 -Migrar a NextJs 
 - Nuevos controllers
 - Realizar la conexion a la base de datos
+- Crear todas las tablas
 
 Stack:
  Node, Express, React y Postgress SQL
