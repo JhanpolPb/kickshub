@@ -13,4 +13,12 @@ const getCart = async (req, res) => {
 
     }
 };
+const addToCart = async (req, res) => {
+    try{
+
+    }catch(err){
+
+
+    }
+};
 
