@@ -1,10 +1,10 @@
 # kickshub
 E-commerce para una tienda de Sneakers
 
--Seccion Inicio de Sesion, Productos, Usuario (Backend Realizado)
+-Seccion Inicio de Sesion, Productos, Usuario, Carrito (Backend Realizado)
 
 -Proximo: Desarrollar los demas controladores con sus rutas
--Proximo: Desarrollar la seccion carrito de compras
+-Proximo: Iniciar y probar en Postman los endpoints
 
 
 -Iniciar Frontend: React
