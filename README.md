@@ -19,6 +19,7 @@ E-commerce para una tienda de Sneakers
 - Nuevos controllers
 - Realizar la conexion a la base de datos
 - Crear todas las tablas
+- Realizar ajustes correspondientes
 
 Stack:
  Node, Express, React y Postgress SQL
