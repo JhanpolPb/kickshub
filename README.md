@@ -6,6 +6,7 @@ Realizado:
 -Probados en postman junto con pgAdmin
 -Backend Funcional
 -PgAdmin actualizado y probado con Backend
+-Controllers al dia
 
 
 
