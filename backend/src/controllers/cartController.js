@@ -43,7 +43,6 @@ const updateCart= async (req, res) => {
         [quantity, id, req.user.id]);
         res.json(result.rows[0]);
     }catch(err){
-         console.log(err);
         res.status(500).json({ error: "Error actualizando el carrito"});
     }
 };
