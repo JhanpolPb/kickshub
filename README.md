@@ -17,6 +17,7 @@ E-commerce para una tienda de Sneakers
 -Postman and Postgress
 -Migrar a NextJs 
 - Nuevos controllers
+- Realizar la conexion a la base de datos
 
 Stack:
  Node, Express, React y Postgress SQL
