@@ -46,3 +46,12 @@ const updateCart= async (req, res) => {
         res.status(500).json({ error: "Error actualizando el carrito"});
     }
 };
+
+const removeFromCart = async (req, res) => {
+
+    try{
+
+    }catch(err){
+
+    }
+};
