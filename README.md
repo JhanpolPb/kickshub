@@ -4,6 +4,8 @@ E-commerce para una tienda de Sneakers
 Realizado:
 -Seccion Inicio de Sesion, Productos, Usuario, Carrito (Backend Realizado)
 -Probados en postman junto con pgAdmin
+-Backend Funcional
+
 
 
 
