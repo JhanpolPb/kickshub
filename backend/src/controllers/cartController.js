@@ -35,11 +35,13 @@ const addToCart = async (req, res) => {
 };
 
 
-const updateCart= asyn(req,res) => {
-    const { id_product, quantity} = req.body;
+const updateCart= async (req, res) => {
+    const { quantity} = req.body;
+    const { id } = req.params;
     try{
-        const result = await pool.query
-
+        const result = await pool.query (" UPDATE cart_items SET quantity = $1 WHERE id_user = $2 AND id_product = $3 RETURNING *",
+        [quantity, req.user.id, id_product]);
+        res.json(result.rows[0]);
     }catch(err){
         res.status(500).json({ error: "Error actualizando el carrito"});
     }
