@@ -74,4 +74,4 @@ const clearCart = async (req, res) => {
         res.status(500).json ({ error: "Error eliminando productos del carrito"});        }
 };
 
-moduel.exports = { getCart, addToCart, updateCart, removeFromCart, clearCart };
+module.exports = { getCart, addToCart, updateCart, removeFromCart, clearCart };
