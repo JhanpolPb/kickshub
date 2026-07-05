@@ -34,3 +34,13 @@ const addToCart = async (req, res) => {
     }
 };
 
+
+const updateCart= asyn(req,res) => {
+    const { id_product, quantity} = req.body;
+    try{
+        const result = await pool.query
+
+    }catch(err){
+        res.status(500).json({ error: "Error actualizando el carrito"});
+    }
+};
