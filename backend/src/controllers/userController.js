@@ -89,6 +89,7 @@ const deleteAddress = async (req, res) => {
 
     }catch(err){
         res.status(500).json ({ error: "Error eliminando direccion"})
+         error: err.message
     }
 };
 
