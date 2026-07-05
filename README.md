@@ -6,6 +6,7 @@ E-commerce para una tienda de Sneakers
 -Proximo: Desarrollar los demas controladores con sus rutas
 -Proximo: Desarrollar la seccion carrito de compras
 
+
 -Iniciar Frontend: React
 -Iniciar Vistas
 -Elegir Framework sea nextJs
@@ -20,6 +21,7 @@ E-commerce para una tienda de Sneakers
 - Realizar la conexion a la base de datos
 - Crear todas las tablas
 - Realizar ajustes correspondientes
+- Dockerizar el proyecto
 
 Stack:
  Node, Express, React y Postgress SQL
