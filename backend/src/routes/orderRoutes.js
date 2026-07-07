@@ -4,7 +4,7 @@ const authMiddleware = require('../middleware/auth');
 
 const {
     getOrders,
-    getOrdersById,
+    getOrderById,
     createOrder,
     updateOrder,
     deleteOrder
