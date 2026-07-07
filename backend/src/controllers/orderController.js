@@ -36,3 +36,12 @@ const getOrderById = async (req, res) => {
         res.status(500).json({ error: "Error al obtener la orden" });
     }
 };
+
+const createOrder = async (req,res) => {
+
+    try{
+
+    }catch(err){
+
+    }
+};
