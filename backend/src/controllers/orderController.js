@@ -9,3 +9,12 @@ const getOrders = async (req,res) => {
         res.status(500).json({ error: "Error al obtener las ordenes" });
     }
 };
+
+const getOrderById = async (req,res) => {
+    const { id } = req.params;
+    try{
+
+    }catch(err){
+        
+    }
+};
