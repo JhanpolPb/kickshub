@@ -6,8 +6,6 @@ const {
     getOrders,
     getOrderById,
     createOrder,
-    updateOrder,
-    deleteOrder
 }= require('../controllers/orderController');
 
 router.get('/', authMiddleware, getOrders);
