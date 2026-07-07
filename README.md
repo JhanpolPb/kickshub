@@ -10,7 +10,7 @@ Realizado:
 -Seguimos con Órdenes y luego Reviews
 
 
-
+Hoy realizamos Ordenes
 
 -Proximo: Desarrollar los demas controladores con sus rutas
 -Proximo: Iniciar y probar en Postman los endpoints
