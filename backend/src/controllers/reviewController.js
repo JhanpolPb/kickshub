@@ -1,4 +1,4 @@
-const pool = require('../config/datbase');
+const pool = require('../config/database');
 
 const getReviews = async (req,res) => {
     try{
