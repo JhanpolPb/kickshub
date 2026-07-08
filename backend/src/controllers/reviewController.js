@@ -23,8 +23,14 @@ const createReview = async (req,res) => {
 
 const deleteReview = async (req,res) => {
     try{
+        const {id} = req.params.id;
+        const result = await pool.query ("DELETE FROM reviews WHERE id_user = $1 and id_product = $2 RETURNING *",)
 
-    }catch(err){
-
+        if (result.rows.length === 0) {
+        return res.status(404).json({ error: "Reseña no encontrada" });
     }
+    res.json({ message: "Reseña eliminada correctamente" });
+  } catch (err) {
+    res.status(500).json({ error: "Error eliminando reseña" });
+  }
 };
