@@ -8,3 +8,11 @@ const getReviews = async (req,res) => {
         res.status(500).json ({ error: "Error al obtener las reseñas"});
     }
 };
+
+const createReview = async (req,res) => {
+    try{
+
+    }catch(err){
+
+    }
+};
