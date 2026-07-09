@@ -7,7 +7,7 @@ Realizado:
 -Backend Funcional
 -PgAdmin actualizado y probado con Backend
 -Controllers al dia
--Seguimos con Órdenes y luego Reviews
+
 
 
 Hoy rea
