@@ -8,7 +8,6 @@ Realizado:
 -PgAdmin actualizado y probado con Backend
 -Controllers al dia
 
- add .
 -Proximo: Iniciar y probar en Postman los endpoints
 
 
