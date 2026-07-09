@@ -2,7 +2,7 @@
 E-commerce para una tienda de Sneakers
 
 Realizado:
--Seccion Inicio de Sesion, Productos, Usuario, Carrito (Backend Realizado)
+-Seccion Inicio de Sesion, Productos, Usuario, Carrito, ordenes, reviews (Backend Realizado)
 -Probados en postman junto con pgAdmin
 -Backend Funcional
 -PgAdmin actualizado y probado con Backend
@@ -10,7 +10,7 @@ Realizado:
 -Seguimos con Órdenes y luego Reviews
 
 
-Hoy realizamos Ordenes
+Hoy rea
 
 -Proximo: Desarrollar los demas controladores con sus rutas
 -Proximo: Iniciar y probar en Postman los endpoints
