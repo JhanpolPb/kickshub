@@ -8,8 +8,6 @@ Realizado:
 -PgAdmin actualizado y probado con Backend
 -Controllers al dia
 
--Proximo: Iniciar y probar en Postman los endpoints
-
 
 -Iniciar Frontend: React
 -Iniciar Vistas
