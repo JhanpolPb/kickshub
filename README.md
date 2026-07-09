@@ -17,12 +17,13 @@ PROXIMO:
 -Envios y coordinador de Rutas
 -Realizar los Cruds coompletos
 
-- Migrar a NextJs 
+
+En un futuro:
+- Migrar a TypeScript
 - Nuevos controllers
-- Crear todas las tablas
-- Realizar ajustes correspondientes
+- Crear nuevos modulos
 - Dockerizar el proyecto
--Desplegar el proyecto en un servicio en la nube
+- Desplegar el proyecto en un servicio en la nube
 
 Stack:
  Node, Express, React y Postgress SQL
