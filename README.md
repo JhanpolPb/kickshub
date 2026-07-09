@@ -8,10 +8,10 @@ Realizado:
 -PgAdmin actualizado y probado con Backend
 -Controllers al dia
 
-
+PROXIMO:
 -Iniciar Frontend: React
 -Iniciar Vistas
--Elegir Framework sea nextJs
+-nextJs
 -Nueva Pasarela de pago
 -Envios y coordinador de Rutas
 -Realizar los Cruds coompletos
