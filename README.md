@@ -18,7 +18,6 @@ PROXIMO:
 
 -Migrar a NextJs 
 - Nuevos controllers
-- Realizar la conexion a la base de datos
 - Crear todas las tablas
 - Realizar ajustes correspondientes
 - Dockerizar el proyecto
