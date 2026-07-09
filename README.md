@@ -7,6 +7,7 @@ Realizado:
 -Backend Funcional
 -PgAdmin actualizado y probado con Backend
 -Controllers al dia
+-Mejorar backend con mas seguridad
 
 PROXIMO:
 -Iniciar Frontend: React - Nextjs
