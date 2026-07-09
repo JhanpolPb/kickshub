@@ -8,11 +8,7 @@ Realizado:
 -PgAdmin actualizado y probado con Backend
 -Controllers al dia
 
-
-
-Hoy rea
-
--Proximo: Desarrollar los demas controladores con sus rutas
+ add .
 -Proximo: Iniciar y probar en Postman los endpoints
 
 
