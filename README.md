@@ -14,7 +14,7 @@ Proximo:
 - nextJs
 - Nueva Pasarela de pago
 - Envios y coordinador de Rutas
--Realizar los Cruds coompletos
+- Realizar los Cruds coompletos
 
 
 En un futuro:
