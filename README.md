@@ -10,7 +10,7 @@ Realizado:
 
 Proximo:
 - Iniciar Frontend: React - Nextjs
--Iniciar Vistas con NextJs
+- Iniciar Vistas con NextJs
 -nextJs
 -Nueva Pasarela de pago
 -Envios y coordinador de Rutas
