@@ -7,7 +7,6 @@ Realizado:
 -Backend Funcional
 -PgAdmin actualizado y probado con Backend
 -Controllers al dia
--Mejorar backend con mas seguridad
 
 PROXIMO:
 -Iniciar Frontend: React - Nextjs
@@ -24,6 +23,7 @@ En un futuro:
 - Crear nuevos modulos
 - Dockerizar el proyecto
 - Desplegar el proyecto en un servicio en la nube
+- -Mejorar backend con mas seguridad
 
 Stack:
  Node, Express, React y Postgress SQL
