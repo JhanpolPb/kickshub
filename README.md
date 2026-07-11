@@ -23,7 +23,7 @@ En un futuro:
 - Crear nuevos modulos
 - Dockerizar el proyecto
 - Desplegar el proyecto en un servicio en la nube
-- -Mejorar backend con mas seguridad
+- Mejorar backend con mas seguridad
 
 Stack:
  Node, Express, React y Postgress SQL
