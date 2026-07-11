@@ -8,7 +8,7 @@ Realizado:
 - PgAdmin actualizado y probado con Backend
 - Controllers al dia
 
-PROXIMO:
+Proximo:
 -Iniciar Frontend: React - Nextjs
 -Iniciar Vistas con NextJs
 -nextJs
