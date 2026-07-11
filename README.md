@@ -9,7 +9,7 @@ Realizado:
 - Controllers al dia
 
 Proximo:
--Iniciar Frontend: React - Nextjs
+- Iniciar Frontend: React - Nextjs
 -Iniciar Vistas con NextJs
 -nextJs
 -Nueva Pasarela de pago
