@@ -1,5 +1,5 @@
 # kickshub
-E-commerce para una tienda de Sneakers
+E-commerce para una tienda de Sneakers Kickshub.co
 
 Realizado:
 - Seccion Inicio de Sesion, Productos, Usuario, Carrito, ordenes, reviews (Backend Realizado)
