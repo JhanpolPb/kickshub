@@ -26,7 +26,7 @@ En un futuro:
 - Mejorar backend con mas seguridad
 
 Stack:
- Node, Express, React y Postgress SQL
+- Node, Express, React y Postgress SQL
 
 Autor:
 Jhanpol Parra Barreto
