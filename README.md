@@ -11,7 +11,7 @@ Realizado:
 Proximo:
 - Iniciar Frontend: React - Nextjs
 - Iniciar Vistas con NextJs
--nextJs
+- nextJs
 -Nueva Pasarela de pago
 -Envios y coordinador de Rutas
 -Realizar los Cruds coompletos
