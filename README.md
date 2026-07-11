@@ -13,7 +13,7 @@ Proximo:
 - Iniciar Vistas con NextJs
 - nextJs
 - Nueva Pasarela de pago
--Envios y coordinador de Rutas
+- Envios y coordinador de Rutas
 -Realizar los Cruds coompletos
 
 
