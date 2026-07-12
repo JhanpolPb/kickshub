@@ -9,6 +9,7 @@ Realizado:
 - Controllers al dia
 
 Proximo:
+- Conexion con el backend a traves de Axios
 - Iniciar Frontend: React - Nextjs
 - Iniciar Vistas con NextJs
 - nextJs
