@@ -1,4 +1,4 @@
-q# kickshub
+# kickshub
 E-commerce para una tienda de Sneakers Kickshub.co
 
  Trabajo Realizado:
