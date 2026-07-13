@@ -14,7 +14,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Nuevas tablas
 - Iniciar Frontend: React - Nextjs
 - Iniciar Vistas con NextJs
-- nextJs
+- Realizar coreos con ofertas API
 - Nueva Pasarela de pago
 - Envios y coordinador de Rutas
 - Realizar los Cruds coompletos
