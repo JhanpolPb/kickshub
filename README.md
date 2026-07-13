@@ -28,8 +28,8 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Desplegar el proyecto en un servicio en la nube
 - Mejorar backend con mas seguridad
 
-#Stack:
+# Stack:
 - Node, Express, React NextJs y Postgress SQL
 
-Autor:
+# Autor:
 Jhanpol Parra Barreto
