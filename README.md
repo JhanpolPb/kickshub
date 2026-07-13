@@ -29,6 +29,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Kubernets
 - Desplegar el proyecto en un servicio en la nube
 - Mejorar backend con mas seguridad
+- Realizar y comercializar la pagina web
 
 # Stack:
 - Node, Express, React NextJs y Postgress SQL
