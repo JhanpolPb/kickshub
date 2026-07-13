@@ -25,6 +25,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Nuevos controllers
 - Crear nuevos modulos
 - Dockerizar el proyecto
+- Kubernets
 - Desplegar el proyecto en un servicio en la nube
 - Mejorar backend con mas seguridad
 
