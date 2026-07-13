@@ -10,6 +10,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 
 Trabajo Proximo a Realizar:
 - Conexion con el backend a traves de Axios
+- Nuevos controllers
 - Iniciar Frontend: React - Nextjs
 - Iniciar Vistas con NextJs
 - nextJs
