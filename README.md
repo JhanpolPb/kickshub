@@ -1,7 +1,7 @@
 # kickshub
 E-commerce para una tienda de Sneakers Kickshub.co
 
- Trabajo Realizado:
+# Trabajo Realizado:
 - Seccion Inicio de Sesion, Productos, Usuario, Carrito, ordenes, reviews (Backend Realizado)
 - Probados en postman junto con pgAdmin
 - Backend Funcional
