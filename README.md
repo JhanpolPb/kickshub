@@ -8,7 +8,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - PgAdmin actualizado y probado con Backend
 - Controllers al dia
 
-Trabajo Proximo a Realizar:
+# Trabajo Proximo a Realizar:
 - Conexion con el backend a traves de Axios
 - Nuevos controllers
 - Nuevas tablas
