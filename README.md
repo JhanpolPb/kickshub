@@ -20,7 +20,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Realizar los Cruds coompletos
 
 
-En un futuro:
+# En un futuro:
 - Migrar a TypeScript
 - Nuevos controllers
 - Crear nuevos modulos
@@ -28,7 +28,7 @@ En un futuro:
 - Desplegar el proyecto en un servicio en la nube
 - Mejorar backend con mas seguridad
 
-Stack:
+#Stack:
 - Node, Express, React NextJs y Postgress SQL
 
 Autor:
