@@ -19,9 +19,10 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Realizar coreos con ofertas API
 - Nueva Pasarela de pago
 - Envios y coordinador de Rutas
-- Realizar los Cruds coompletos
+- Realizar los Cruds completos
 - APIS de correos
 - Realizar vistas con Nextjs
+- 
 
 # En un futuro:
 - Migrar a TypeScript
