@@ -19,6 +19,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Nueva Pasarela de pago
 - Envios y coordinador de Rutas
 - Realizar los Cruds coompletos
+- APIS de correos
 
 
 # En un futuro:
