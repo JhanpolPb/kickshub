@@ -10,6 +10,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Tablas al dia
 - Se agrego favicon
 - Conexion de Backend con Frontend
+- Se inicio el Frontend
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
