@@ -15,7 +15,6 @@ E-commerce para una tienda de Sneakers Kickshub.co
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
 - Nuevas tablas
-- Iniciar Frontend: React - Nextjs
 - Realizar coreos con ofertas API
 - Nueva Pasarela de pago
 - Envios y coordinador de Rutas
