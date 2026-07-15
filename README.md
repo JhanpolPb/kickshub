@@ -11,6 +11,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Se agrego favicon
 - Conexion de Backend con Frontend
 - Se inicio el Frontend
+- layout.js y page.js
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
