@@ -6,6 +6,6 @@ export default function HomePage() {
       <h1>Bienvenido a KicksHub </h1>
       <p>Tu tienda de sneakers de confianza</p>
       <Link href="/catalog">Ver catálogo</Link>
-    </div>
+      <Link href="/login">Iniciar sesión</Link>    </div>
   );
 }
