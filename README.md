@@ -20,7 +20,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Envios y coordinador de Rutas
 - Realizar los Cruds coompletos
 - APIS de correos
-
+- Realizar vistas con Nextjs
 
 # En un futuro:
 - Migrar a TypeScript
