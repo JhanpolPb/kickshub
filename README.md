@@ -40,3 +40,4 @@ E-commerce para una tienda de Sneakers Kickshub.co
 # Autor:
 Jhanpol Parra Barreto
 Developer Full-Stack
+Ingeniero
