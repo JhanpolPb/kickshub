@@ -16,8 +16,8 @@ export default function LoginPage() {
   const { router } = useRouter ();
 
   const handleSubmit = async (e) => {
-    e.preventDefault(),
-    setLoanding (),
+    e.preventDefault(true),
+    setLoanding (null),
     setError
   }
 
