@@ -18,8 +18,7 @@ export default function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault(),
     setLoanding (),
-
-    
+    setError
   }
 
 
