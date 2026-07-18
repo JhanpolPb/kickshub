@@ -26,7 +26,8 @@ export default function LoginPage() {
     login (data.user, data.token);
     router.push ("/catalog");
 
-  }catch{
+  }catch(err){
+    
     
   }
 
