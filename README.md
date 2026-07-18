@@ -22,6 +22,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Realizar los Cruds completos
 - APIS de correos
 - Realizar vistas con Nextjs
+- Home de la pagina
 
 
 # En un futuro:
