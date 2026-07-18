@@ -23,6 +23,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - APIS de correos
 - Realizar vistas con Nextjs
 - Home de la pagina
+- UI   / UX
 
 
 # En un futuro:
