@@ -27,7 +27,8 @@ export default function LoginPage() {
     router.push ("/catalog");
 
   }catch(err){
-    
+    setError ("Email o contraseña incorrecta")
+
     
   }
 
