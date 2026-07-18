@@ -22,6 +22,7 @@ export default function LoginPage() {
   }
   
   try{
+    const data = await loginService(email, password);
 
   }catch{
     
