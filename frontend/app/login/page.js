@@ -28,8 +28,8 @@ export default function LoginPage() {
 
   }catch(err){
     setError ("Email o contraseña incorrecta")
-
-    
+  } finally{
+    setLoading(False);
   }
 
-}
+};
