@@ -24,6 +24,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Realizar vistas con Nextjs
 - Home de la pagina
 - UI   / UX
+- Realizar un apartado de Juego Interactivo
 
 
 # En un futuro:
