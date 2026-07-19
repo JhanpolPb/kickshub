@@ -10,6 +10,8 @@ export default function HomePage() {
       <Link href="/login">Iniciar sesión</Link>  
 
       <p> SHOP NOW </p>
+      <Link href="/home"> SHOP NOW </Link>  
+
       </div>
   );
 } 
