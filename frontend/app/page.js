@@ -7,7 +7,9 @@ export default function HomePage() {
       <p>Tu tienda de sneakers de confianza</p>
       <Link href="/catalog">Ver catálogo</Link>
       <p>Compra ahora tus sneakers favoritos y disfruta de la mejor experiencia de compra en línea.</p>
-      <Link href="/login">Iniciar sesión</Link>    
+      <Link href="/login">Iniciar sesión</Link>  
+
+      <p> SHOP NOW </p>
       </div>
   );
-}
+} 
