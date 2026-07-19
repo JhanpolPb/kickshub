@@ -25,6 +25,8 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Home de la pagina
 - UI   / UX
 - Realizar un apartado de Juego Interactivo
+- Corregir las consultas
+
 
 
 # En un futuro:
