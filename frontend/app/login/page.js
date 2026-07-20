@@ -35,6 +35,8 @@ export default async function LoginPage() {
 };
 
 return (
-  <div style {{maxWidth: }}
+     <div style={{ maxWidth: "400px", margin: "100px auto", padding: "2rem" }}>
+      <h1>Iniciar Sesión</h1>
+
 
 );
