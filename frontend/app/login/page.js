@@ -38,5 +38,5 @@ return (
      <div style={{ maxWidth: "400px", margin: "100px auto", padding: "2rem" }}>
       <h1>Iniciar Sesión</h1>
 
-
+      {error && <p style={{ color: "red" }}>{error}</p>}
 );
