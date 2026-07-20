@@ -17,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors({
   origin: "https//localhost:3000",
+  credentials: true
 })
 
 app.get("/", (req, res) => {
