@@ -35,5 +35,6 @@ export default async function LoginPage() {
 };
 
 return (
+  <div style {{maxWidth: }}
 
 );
