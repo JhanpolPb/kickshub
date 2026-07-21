@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../src/context/authContext";
-import { login as loginService } from "../../src/services/authService";
+import { register } from "../../src/services/authService";
 import Link from "next/link";
 
 
