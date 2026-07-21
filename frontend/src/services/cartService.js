@@ -14,3 +14,8 @@ export const updateCartItem = async (id, quantity) => {
     const res = await api.put (`/cart/${id}`, {quantity});
     return res.data;
 }
+
+export const  removeFromCart = async (id) => {
+    const res = await api.delete (`/cart/${id}`);
+    return res.data;
+}
