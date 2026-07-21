@@ -22,7 +22,7 @@ export default function RegisterPage(){
     setError(null);
 
     try {
-      const data = await loginService(name, email, password);
+      const data = await register(name, email, password);
       login(data.user, data.token);
       router.push("/catalog");
     } catch (err) {
