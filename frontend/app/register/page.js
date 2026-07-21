@@ -19,4 +19,16 @@ export default function RegisterPage(){
     setLoading(true);
     setError(null);
 
+    try {
+      const data = await loginService(name, email, password);
+      login(data.user, data.token);
+      router.push("/catalog");
+    } catch (err) {
+      setError("Error al registrarse, intenta de nuevo...");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
 }
