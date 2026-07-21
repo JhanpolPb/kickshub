@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import api from "../../src/services/api";
+import { addToCart } from "../../src/services/cartService";
 
 export default function CatalogPage() {
   const [products, setProducts] = useState([]);
