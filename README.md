@@ -13,6 +13,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Se inicio el Frontend
 - layout.js y page.js
 - Se esta realizando la page Order
+- Autenticacion Correcta 
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
