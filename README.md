@@ -15,6 +15,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Se esta realizando la page Order
 - Autenticacion Correcta 
 - Añadir al carrito Funcional
+- Eliminar del carrito Funcional
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
