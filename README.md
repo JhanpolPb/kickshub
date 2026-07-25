@@ -14,6 +14,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - layout.js y page.js
 - Se esta realizando la page Order
 - Autenticacion Correcta 
+- Añadir al carrito Funcional
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
