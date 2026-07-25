@@ -28,7 +28,7 @@ export default function OrdersPage() {
 
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "2rem" }}>
-      <h1>Mis Órdenes 📦</h1>
+      <h1>Mis Órdenes </h1>
 
       {orders.length === 0 ? (
         <div style={{ textAlign: "center", marginTop: "3rem" }}>
@@ -63,7 +63,7 @@ export default function OrdersPage() {
               </div>
             </div>
             <Link href={`/orders/${order.id}`} style={{ display: "inline-block", marginTop: "1rem", color: "#000", textDecoration: "underline" }}>
-              Ver detalle →
+              Ver detalle 
             </Link>
           </div>
         ))
