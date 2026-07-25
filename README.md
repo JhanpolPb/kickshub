@@ -18,6 +18,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Eliminar del carrito Funcional
 - Navbar
 - Home en proceso
+- Registrarse Funcional
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
