@@ -28,8 +28,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Realizar un apartado de Juego Interactivo
 - Corregir las consultas
 - Añadir metodos de consulta
-- Responsive design 
-
+- Responsive design   
 
 # En un futuro:
 - Migrar a TypeScript
@@ -40,6 +39,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Desplegar el proyecto en un servicio en la nube
 - Mejorar backend con mas seguridad
 - Realizar y comercializar la pagina web
+- Permitir añadir tenis
 
 # Stack:
 - Node, Express, React NextJs y Postgress SQL
