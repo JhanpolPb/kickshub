@@ -12,7 +12,14 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Conexion de Backend con Frontend
 - Se inicio el Frontend
 - layout.js y page.js
-- Se esta realizando page orders
+- Se esta realizando la page Order
+- Autenticacion Correcta 
+- Añadir al carrito Funcional
+- Eliminar del carrito Funcional
+- Navbar
+- Home en proceso
+- Registrarse Funcional
+- Web Funcional 
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
@@ -28,6 +35,8 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Realizar un apartado de Juego Interactivo
 - Corregir las consultas
 - Añadir metodos de consulta
+- Responsive design   
+- Realizar y comparar con diferentes paginas y buscar el producto agregado.
 
 
 # En un futuro:
@@ -39,6 +48,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Desplegar el proyecto en un servicio en la nube
 - Mejorar backend con mas seguridad
 - Realizar y comercializar la pagina web
+- Permitir añadir tenis
 
 # Stack:
 - Node, Express, React NextJs y Postgress SQL
