@@ -41,6 +41,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Realizar y comparar con diferentes paginas y buscar el producto agregado.
 - Mejorar diseño responsive
 - Mejorar la pagina web y permitir agregar sneakers al admin
+- Mejorar backend y triggers
 
 
 # En un futuro:
