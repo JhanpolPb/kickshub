@@ -54,6 +54,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Mejorar backend con mas seguridad
 - Realizar y comercializar la pagina web
 - Permitir añadir tenis
+- Permitir agregar al carrito y redirigir al wpp
 
 # Stack:
 - Node, Express, React NextJs y Postgress SQL
