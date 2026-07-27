@@ -57,6 +57,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Permitir añadir tenis
 - Permitir agregar al carrito y redirigir al wpp
 - Crear una pasarela de pagos y de ordenes
+- Mejorar arquitectura
 
 # Stack:
 - Node, Express, React NextJs y Postgress SQL
