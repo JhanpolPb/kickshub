@@ -20,6 +20,8 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Home en proceso
 - Registrarse Funcional
 - Web Funcional 
+- Deploy en Render
+- Logica del negocio
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
@@ -37,6 +39,10 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Añadir metodos de consulta
 - Responsive design   
 - Realizar y comparar con diferentes paginas y buscar el producto agregado.
+- Mejorar diseño responsive
+- Mejorar la pagina web y permitir agregar sneakers al admin
+- Mejorar backend y triggers
+- Mejorar Frontend
 
 
 # En un futuro:
@@ -49,6 +55,10 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Mejorar backend con mas seguridad
 - Realizar y comercializar la pagina web
 - Permitir añadir tenis
+- Permitir agregar al carrito y redirigir al wpp
+- Crear una pasarela de pagos y de ordenes
+- Mejorar arquitectura
+- Que sea un solo entorno para varias tiendas.
 
 # Stack:
 - Node, Express, React NextJs y Postgress SQL
