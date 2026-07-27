@@ -39,6 +39,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Añadir metodos de consulta
 - Responsive design   
 - Realizar y comparar con diferentes paginas y buscar el producto agregado.
+- Mejorar diseño responsive
 
 
 # En un futuro:
