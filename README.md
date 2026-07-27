@@ -20,6 +20,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Home en proceso
 - Registrarse Funcional
 - Web Funcional 
+- Deploy en Render
 
 # Trabajo Proximo a Realizar:
 - Nuevos controllers
