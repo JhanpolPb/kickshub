@@ -38,7 +38,7 @@ export default function CatalogPage() {
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem" }}>
       <h1>Catálogo de Sneakers</h1>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem", marginTop: "2rem" }}>
+      <div style={{ display: "grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap: "2rem", marginTop: "2rem" }}>
         {products.map((product) => (
           <div key={product.id} style={{ border: "1px solid #eee", borderRadius: "8px", padding: "1rem" }}>
             <img src={product.image_url} alt={product.name} style={{ width: "100%", height: "200px", objectFit: "cover" }} />

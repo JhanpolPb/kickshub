@@ -59,7 +59,7 @@ export default function HomePage() {
       {/* Features */}
       <div style={{
         display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
+        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
         gap: "0",
         borderBottom: "1px solid #eee"
       }}>
