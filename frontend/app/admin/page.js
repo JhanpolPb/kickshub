@@ -9,7 +9,7 @@ export default function AdminPage() {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
   const [imageFile, setImageFile] = useState(null);
-  const [uploading, setUploanding] = useSatet(false);
+  const [uploading, setUploading] = useState(false);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -44,7 +44,7 @@ export default function AdminPage() {
       const res = await api.post("/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" }
       });
-      setForm({ ...form, image_url: res.data.url });
+      setForm((prev) => ({ ...prev, image_url: res.data.url }));
     } catch (err) {
       alert("Error subiendo imagen");
     } finally {
@@ -97,7 +97,7 @@ export default function AdminPage() {
   return (
     <div style={{ maxWidth: "1000px", margin: "0 auto", padding: "2rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem" }}>
-        <h1>Panel Admin </h1>
+        <h1>Panel Admin 🛠️</h1>
         <button
           onClick={() => { setShowForm(!showForm); setEditProduct(null); setForm({ name: "", brand: "", price: "", size: "", stock: "", image_url: "" }); }}
           style={{ padding: "10px 20px", background: "#000", color: "#fff", border: "none", borderRadius: "4px", cursor: "pointer" }}
@@ -118,7 +118,6 @@ export default function AdminPage() {
                 { label: "Precio", key: "price", type: "number" },
                 { label: "Talla", key: "size", type: "number" },
                 { label: "Stock", key: "stock", type: "number" },
-                { label: "URL imagen", key: "image_url", type: "text" },
               ].map(({ label, key, type }) => (
                 <div key={key}>
                   <label style={{ display: "block", marginBottom: "4px", fontSize: "0.9rem" }}>{label}</label>
@@ -132,8 +131,31 @@ export default function AdminPage() {
                 </div>
               ))}
             </div>
+
+            {/* Campo imagen */}
+            <div style={{ marginTop: "1rem" }}>
+              <label style={{ display: "block", marginBottom: "4px", fontSize: "0.9rem" }}>Imagen</label>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => {
+                  const file = e.target.files[0];
+                  if (file) {
+                    setImageFile(file);
+                    handleImageUpload(file);
+                  }
+                }}
+                style={{ width: "100%", padding: "8px", border: "1px solid #ddd", borderRadius: "4px" }}
+              />
+              {uploading && <p style={{ fontSize: "0.85rem", color: "#666", marginTop: "4px" }}>Subiendo imagen...</p>}
+              {form.image_url && (
+                <img src={form.image_url} alt="preview" style={{ width: "100px", height: "100px", objectFit: "cover", borderRadius: "4px", marginTop: "8px" }} />
+              )}
+            </div>
+
             <button
               type="submit"
+              disabled={uploading}
               style={{ marginTop: "1rem", padding: "10px 24px", background: "#000", color: "#fff", border: "none", borderRadius: "4px", cursor: "pointer" }}
             >
               {editProduct ? "Guardar cambios" : "Crear producto"}
