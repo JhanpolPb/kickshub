@@ -35,7 +35,7 @@ export default function AdminPage() {
       setLoading(false);
     }
   };
-  
+
   const handleImageUpload = async (file) => {
     setUploading(true);
     try {
