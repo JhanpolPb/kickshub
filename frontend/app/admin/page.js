@@ -35,6 +35,22 @@ export default function AdminPage() {
       setLoading(false);
     }
   };
+  
+  const handleImageUpload = async (file) => {
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+      const res = await api.post("/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" }
+      });
+      setForm({ ...form, image_url: res.data.url });
+    } catch (err) {
+      alert("Error subiendo imagen");
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
