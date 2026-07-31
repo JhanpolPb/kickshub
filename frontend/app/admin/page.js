@@ -8,6 +8,8 @@ import api from "../../src/services/api";
 export default function AdminPage() {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
+  const [imageFile, setImageFile] = useState(null);
+  const [uploading, setUploanding] = useSatet(false);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
