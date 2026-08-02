@@ -43,6 +43,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Mejorar la pagina web y permitir agregar sneakers al admin
 - Mejorar backend y triggers
 - Mejorar Frontend
+- Agregar Roles
 
 
 # En un futuro:
