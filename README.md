@@ -44,6 +44,7 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Mejorar backend y triggers
 - Mejorar Frontend
 - Agregar Roles
+- Realizar pasarela de pagos
 
 
 # En un futuro:
