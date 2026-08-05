@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const cloudinary = require("../config/cloudinary");
 const upload = require("../middleware/upload");
-const authMiddleware = require("../middleware/auth");
+const authMiddleware = require("../middleware/authMiddleware");
 const adminMiddleware = require("../middleware/adminMiddleware");
 
 router.post("/", authMiddleware, adminMiddleware, upload.single("image"), async (req, res) => {
