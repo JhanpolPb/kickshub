@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../../src/context/authContext";
 import { useRouter } from "next/navigation";
 import api from "../../src/services/api";
+import { getOrderById } from "../../../src/services/orderService";
 
 export default function AdminPage() {
   const { user, loading: authLoading } = useAuth();
