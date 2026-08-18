@@ -24,10 +24,10 @@ const getProductById = async (req, res) => {
 
 const createProduct = async (req, res) => {
   try {
-    const { name, brand, price, size, stock, image_url } = req.body;
+    const { name, brand, price, size, stock, image_url, sizes } = req.body;
     const result = await pool.query(
-      "INSERT INTO products (name, brand, price, size, stock, image_url) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *",
-      [name, brand, price, size, stock, image_url]
+      "INSERT INTO products (name, brand, price, size, stock, image_url, sizes) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING *",
+      [name, brand, price, size, stock, image_url, JSON.stringify(sizes || [])]
     );
     res.status(201).json(result.rows[0]);
   } catch (err) {
@@ -38,19 +38,15 @@ const createProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, brand, price, size, stock, image_url } = req.body;
+    const { name, brand, price, size, stock, image_url, sizes } = req.body;
     const result = await pool.query(
-      "UPDATE products SET name=$1, brand=$2, price=$3, size=$4, stock=$5, image_url=$6 WHERE id=$7 RETURNING *",
-      [name, brand, price, size, stock, image_url, id]
+      "UPDATE products SET name=$1, brand=$2, price=$3, size=$4, stock=$5, image_url=$6, sizes=$7 WHERE id=$8 RETURNING *",
+      [name, brand, price, size, stock, image_url, JSON.stringify(sizes || []), id]
     );
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: "Producto no encontrado" });
-    }
-    res.json(result.rows[0]);
+    res.status(200).json(result.rows[0]);
   } catch (err) {
     res.status(500).json({ error: "Error actualizando producto" });
   }
-};
 
 const deleteProduct = async (req, res) => {
   try {
