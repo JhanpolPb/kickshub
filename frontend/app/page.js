@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HomeProductsSection from "../src/components/HomeProductsSection";
+import homeProduct from "../src/components/homeProduct";
 
 export const metadata = {
   title: "KicksHub — Sneakers Auténticos",
