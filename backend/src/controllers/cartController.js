@@ -35,15 +35,21 @@ const addToCart = async (req, res) => {
 };
 
 
-const updateCart= async (req, res) => {
-    const { quantity} = req.body;
+const updateCart = async (req, res) => {
+    const { quantity } = req.body;
     const { id } = req.params;
-    try{
-        const result = await pool.query (" UPDATE cart_items SET quantity = $1 WHERE id_user = $2 AND id_product = $3 RETURNING *",
-        [quantity, id, req.user.id]);
+    try {
+        // id es el id_product, verificamos que pertenece al usuario
+        const result = await pool.query(
+            "UPDATE cart_items SET quantity = $1 WHERE id_user = $2 AND id_product = $3 RETURNING *",
+            [quantity, req.user.id, id]
+        );
+        if (result.rows.length === 0) {
+            return res.status(404).json({ error: "Producto no encontrado en el carrito" });
+        }
         res.json(result.rows[0]);
-    }catch(err){
-        res.status(500).json({ error: "Error actualizando el carrito"});
+    } catch (err) {
+        res.status(500).json({ error: "Error actualizando el carrito" });
     }
 };
 
@@ -63,15 +69,18 @@ const removeFromCart = async (req, res) => {
 };
 
 const clearCart = async (req, res) => {
-    try{
-    const result = await pool.query("DELETE FROM cart_items WHERE id_user = $1 RETURNING *",[req.user.id]);
-
-    if (result.rows.length ===0){
-        res.status(404).json ({ error: "No hay productos en el carrito para eliminar"});
+    try {
+        const result = await pool.query(
+            "DELETE FROM cart_items WHERE id_user = $1 RETURNING *",
+            [req.user.id]
+        );
+        if (result.rows.length === 0) {
+            return res.status(404).json({ error: "No hay productos en el carrito para eliminar" });
+        }
+        res.json({ message: "Carrito eliminado correctamente" });
+    } catch (err) {
+        res.status(500).json({ error: "Error eliminando productos del carrito" });
     }
-    res.json({ message: "Carrito eliminado correctamente"});
-    }catch(err){
-        res.status(500).json ({ error: "Error eliminando productos del carrito"});        }
 };
 
 module.exports = { getCart, addToCart, updateCart, removeFromCart, clearCart };

@@ -11,12 +11,18 @@ const getOrders = async (req,res) => {
 };
 
 const getOrderById = async (req, res) => {
-    try{
+    try {
         const { id } = req.params;
         const result = await pool.query("SELECT * FROM orders WHERE id = $1", [id]);
-        
-        if(result.rows.length === 0){
+
+        if (result.rows.length === 0) {
             return res.status(404).json({ error: "Orden no encontrada" });
+        }
+
+        // Verificar que la orden pertenece al usuario (o es admin)
+        const order = result.rows[0];
+        if (order.id_user !== req.user.id && req.user.role !== "admin") {
+            return res.status(403).json({ error: "No tienes permiso para ver esta orden" });
         }
 
         const items = await pool.query(
@@ -27,12 +33,9 @@ const getOrderById = async (req, res) => {
             [id]
         );
 
-        res.json({
-            ...result.rows[0],
-            items: items.rows
-        });
+        res.json({ ...order, items: items.rows });
 
-    }catch(err){
+    } catch (err) {
         res.status(500).json({ error: "Error al obtener la orden" });
     }
 };

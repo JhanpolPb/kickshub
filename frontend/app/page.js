@@ -1,5 +1,5 @@
 import Link from "next/link";
-import homeProduct from "../src/components/homeProduct";
+import HomeProduct from "../src/components/homeProduct";
 
 export const metadata = {
   title: "KicksHub — Sneakers Auténticos",
@@ -159,7 +159,7 @@ export default async function HomePage() {
           </div>
 
           {/* Grid de productos — Client Component para interactividad */}
-          <homeProduct products={featuredProducts} />
+          <HomeProduct products={featuredProducts} />
 
           {/* Ver más — mobile */}
           <div className="text-center mt-10 sm:hidden">

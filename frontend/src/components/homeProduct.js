@@ -7,7 +7,7 @@ import { addToCart } from "../services/cartService";
 import { useAuth } from "../context/authContext";
 import { useRouter } from "next/navigation";
 
-export default function HomeProductsSection({ products }) {
+export default function HomeProduct({ products }) {
   const [addingId, setAddingId] = useState(null);
   const { user } = useAuth();
   const router = useRouter();

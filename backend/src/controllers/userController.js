@@ -76,8 +76,7 @@ const addAddress = async (req, res) => {
     res.status(201).json(result.rows[0]
     )
     }catch(err){
-        res.status(500).json ({ error: "Error agregando direcciones"});
-            detalle: err.message
+        res.status(500).json({ error: "Error agregando direcciones", detalle: err.message });
     }
 };
 
@@ -88,8 +87,7 @@ const deleteAddress = async (req, res) => {
     res.json({ message: "Dirección eliminada correctamente"});
 
     }catch(err){
-        res.status(500).json ({ error: "Error eliminando direccion"})
-         error: err.message
+        res.status(500).json({ error: "Error eliminando direccion", detalle: err.message });
     }
 };
 
