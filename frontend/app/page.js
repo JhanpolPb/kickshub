@@ -159,7 +159,7 @@ export default async function HomePage() {
           </div>
 
           {/* Grid de productos — Client Component para interactividad */}
-          <HomeProductsSection products={featuredProducts} />
+          <homeProduct products={featuredProducts} />
 
           {/* Ver más — mobile */}
           <div className="text-center mt-10 sm:hidden">
