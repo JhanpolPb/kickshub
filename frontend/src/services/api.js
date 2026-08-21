@@ -1,8 +1,11 @@
-import axios from "axios"; 
+import axios from "axios";
 
-const api = axios.create({
-    baseURL: "https://kickshub.onrender.com/api", 
-});
+// En local: Next.js proxea /api/* → https://kickshub.onrender.com/api/* (evita CORS)
+// En Render (producción): la var de entorno apunta directo al backend
+const baseURL =
+  process.env.NEXT_PUBLIC_API_URL || "/api";
+
+const api = axios.create({ baseURL });
 
 api.interceptors.request.use((config) => {
   if (typeof window !== "undefined") {
@@ -17,7 +20,6 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    // Token expirado o inválido — limpiar sesión
     if (error.response?.status === 401 && typeof window !== "undefined") {
       localStorage.removeItem("token");
     }
