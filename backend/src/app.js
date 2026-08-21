@@ -13,11 +13,23 @@ const uploadRoutes = require("./routes/uploadRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Orígenes permitidos: producción + localhost en cualquier puerto de desarrollo
+const allowedOrigins = [
+  "https://kickshub-frontend.onrender.com",
+  ...(process.env.NODE_ENV !== "production"
+    ? ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://localhost:3003"]
+    : []),
+  // Si defines CORS_ORIGIN en las variables de entorno de Render, lo agrega también
+  ...(process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(",") : []),
+];
+
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://kickshub-frontend.onrender.com"
-  ],
+  origin: (origin, callback) => {
+    // Permitir requests sin origin (Postman, mobile apps, curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    callback(new Error(`CORS bloqueado: ${origin}`));
+  },
   credentials: true
 }));
 
