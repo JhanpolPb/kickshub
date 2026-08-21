@@ -102,16 +102,9 @@ export default function HomePage() {
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
           <span className="text-[10px] tracking-[0.4em] uppercase">Scroll</span>
           <div className="relative w-px h-12 bg-white/10 overflow-hidden">
-            <div className="absolute top-0 left-0 w-full bg-white/50 animate-[scrollDown_2s_ease-in-out_infinite]" style={{ height: "40%", animation: "scrollDown 2s ease-in-out infinite" }} />
+            <div className="absolute top-0 left-0 w-full bg-white/50 animate-scroll-down" style={{ height: "40%" }} />
           </div>
         </div>
-
-        <style jsx>{`
-          @keyframes scrollDown {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(300%); }
-          }
-        `}</style>
       </section>
 
       {/* ── STATS ── */}
@@ -135,7 +128,7 @@ export default function HomePage() {
         </p>
         {/* Ticker animado */}
         <div className="relative flex overflow-hidden">
-          <div className="flex gap-16 animate-[marquee_20s_linear_infinite] whitespace-nowrap">
+          <div className="flex gap-16 animate-marquee whitespace-nowrap">
             {[...brands, ...brands].map((brand, i) => (
               <span
                 key={i}
