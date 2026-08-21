@@ -2,8 +2,14 @@ const pool = require('../config/database');
 
 const getReviews = async (req,res) => {
     try{
-        
-        const result = await pool.query ("SELECT * FROM reviews WHERE id_product = $1", [req.params.id]);
+        const result = await pool.query(
+            `SELECT r.*, u.name AS user_name
+             FROM reviews r
+             LEFT JOIN users u ON r.id_user = u.id
+             WHERE r.id_product = $1
+             ORDER BY r.created_at DESC`,
+            [req.params.id]
+        );
         res.json(result.rows);
     }catch(err){
         res.status(500).json ({ error: "Error al obtener las reseñas"});

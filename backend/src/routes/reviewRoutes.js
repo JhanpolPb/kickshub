@@ -8,7 +8,7 @@ const {
     deleteReview,
 } = require('../controllers/reviewController');
 
-router.get('/:id', authMiddleware, getReviews);
+router.get('/:id', getReviews);          // público — cualquiera puede ver reseñas
 router.post('/', authMiddleware, createReview);
 router.delete('/:id', authMiddleware, deleteReview);
 
