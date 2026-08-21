@@ -142,13 +142,6 @@ export default function HomePage() {
           <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10" />
           <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10" />
         </div>
-
-        <style jsx>{`
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}</style>
       </section>
 
       {/* ── FEATURES ── */}
