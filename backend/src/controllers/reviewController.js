@@ -16,15 +16,29 @@ const getReviews = async (req,res) => {
     }
 };
 
-const createReview = async (req,res) => {
-    try{
-       const { id_product, calification, comment } = req.body;
-        const result = await pool.query ("INSERT INTO reviews (id_user, id_product, calification, comment) VALUES ($1,$2,$3,$4) RETURNING *",
-        [req.user.id, id_product, calification, comment]);
-        res.status(201).json(result.rows[0]);
-    }catch(err){
-        res.status(500).json({ error: "Error al crear la reseña"});
+const createReview = async (req, res) => {
+    try {
+        const { id_product, calification, comment } = req.body;
 
+       
+        if (!calification || calification < 1 || calification > 5) {
+            return res.status(400).json({ error: "La calificación debe ser entre 1 y 5" });
+        }
+        const existing = await pool.query(
+            "SELECT id_review FROM reviews WHERE id_user = $1 AND id_product = $2",
+            [req.user.id, id_product]
+        );
+        if (existing.rows.length > 0) {
+            return res.status(400).json({ error: "Ya dejaste una reseña para este producto" });
+        }
+
+        const result = await pool.query(
+            "INSERT INTO reviews (id_user, id_product, calification, comment) VALUES ($1, $2, $3, $4) RETURNING *",
+            [req.user.id, id_product, calification, comment]
+        );
+        res.status(201).json(result.rows[0]);
+    } catch (err) {
+        res.status(500).json({ error: "Error al crear la reseña" });
     }
 };
 
