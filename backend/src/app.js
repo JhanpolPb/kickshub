@@ -40,8 +40,8 @@ app.use(cors({
 
 
 app.use(rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutos
-  max: 200,                  // max 200 requests por IP por ventana
+  windowMs: 15 * 60 * 1000, 
+  max: 200,                  
   standardHeaders: true,
   legacyHeaders: false,
   message: { error: "Demasiadas solicitudes, intenta más tarde" },
@@ -49,12 +49,12 @@ app.use(rateLimit({
 
 
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutos
-  max: 10,                   // max 10 intentos de login/registro
+  windowMs: 15 * 60 * 1000, 
+  max: 10,                   
   message: { error: "Demasiados intentos, espera 15 minutos" },
 });
 
-app.use(express.json({ limit: "10kb" })); // Limitar tamaño del body
+app.use(express.json({ limit: "10kb" })); 
 
 
 app.get("/", (_req, res) => {
@@ -65,7 +65,7 @@ app.get("/", (_req, res) => {
   });
 });
 
-// ── Rutas ──
+
 app.use("/api/products", productRoutes);
 app.use("/api/auth",     authLimiter, authRoutes);
 app.use("/api/users",    userRoutes);
@@ -74,7 +74,7 @@ app.use("/api/orders",   orderRoutes);
 app.use("/api/reviews",  reviewRoutes);
 app.use("/api/upload",   uploadRoutes);
 
-// ── Error handler global ──
+
 app.use((err, _req, res, _next) => {
   console.error(err.message);
   if (err.message.startsWith("CORS bloqueado")) {
