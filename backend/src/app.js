@@ -38,7 +38,7 @@ app.use(cors({
   credentials: true,
 }));
 
-// ── Rate limiting global ──
+
 app.use(rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutos
   max: 200,                  // max 200 requests por IP por ventana
@@ -47,7 +47,7 @@ app.use(rateLimit({
   message: { error: "Demasiadas solicitudes, intenta más tarde" },
 }));
 
-// ── Rate limiting estricto para auth (anti fuerza bruta) ──
+
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutos
   max: 10,                   // max 10 intentos de login/registro
@@ -56,7 +56,7 @@ const authLimiter = rateLimit({
 
 app.use(express.json({ limit: "10kb" })); // Limitar tamaño del body
 
-// ── Health check ──
+
 app.get("/", (_req, res) => {
   res.json({
     message: "Bienvenido a KicksHub API",
