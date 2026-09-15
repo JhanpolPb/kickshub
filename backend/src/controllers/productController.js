@@ -43,8 +43,12 @@ const updateProduct = async (req, res) => {
       "UPDATE products SET name=$1, brand=$2, price=$3, size=$4, stock=$5, image_url=$6, sizes=$7 WHERE id=$8 RETURNING *",
       [name, brand, price, size, stock, image_url, JSON.stringify(sizes || []), id]
     );
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: "Producto no encontrado" });
+    }
     res.status(200).json(result.rows[0]);
   } catch (err) {
+    console.error("updateProduct error:", err);
     res.status(500).json({ error: "Error actualizando producto" });
   }
 };

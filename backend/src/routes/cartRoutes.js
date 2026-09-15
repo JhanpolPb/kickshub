@@ -6,7 +6,7 @@ const { getCart, addToCart, updateCart, removeFromCart, clearCart } = require(".
 router.get("/", authMiddleware, getCart);
 router.post("/", authMiddleware, addToCart);
 router.put("/:id", authMiddleware, updateCart);
-router.delete("/:id", authMiddleware, removeFromCart);
 router.delete("/", authMiddleware, clearCart);
+router.delete("/:id", authMiddleware, removeFromCart);
 
 module.exports = router;

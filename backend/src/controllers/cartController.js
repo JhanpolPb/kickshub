@@ -8,9 +8,9 @@ const getCart = async (req, res) => {
         );
         res.json(result.rows);
 
-    }catch{
-        res.status(500).json({ error: "Error obteniendo carrito"});
-
+    } catch (err) {
+        console.error("getCart error:", err);
+        res.status(500).json({ error: "Error obteniendo carrito" });
     }
 };
 const addToCart = async (req, res) => {
@@ -56,30 +56,31 @@ const updateCart = async (req, res) => {
 const removeFromCart = async (req, res) => {
     const {id} = req.params;
     try{
-    const result = await pool.query ("DELETE FROM cart_items WHERE id_user = $1 AND id_product = $2 RETURNING *",
-    [req.user.id, id]);
-    
-    if (result.rows.length ===0){
-       return res.status(404).json({ error: "Producto no encontrado en el carrito"});
+    const result = await pool.query(
+        "DELETE FROM cart_items WHERE id_user = $1 AND id_product = $2 RETURNING *",
+        [req.user.id, id]
+    );
+    if (result.rows.length === 0) {
+        return res.status(404).json({ error: "Producto no encontrado en el carrito" });
     }
-    res.json({ message: "Producto eliminado del carrito"});
-    }catch(err){
-        res.status(500).json ({ error: "Error  eliminando productos del carrito"});
+    res.json({ message: "Producto eliminado del carrito" });
+    } catch (err) {
+        console.error("removeFromCart error:", err);
+        res.status(500).json({ error: "Error eliminando producto del carrito" });
     }
 };
 
 const clearCart = async (req, res) => {
     try {
-        const result = await pool.query(
-            "DELETE FROM cart_items WHERE id_user = $1 RETURNING *",
+        await pool.query(
+            "DELETE FROM cart_items WHERE id_user = $1",
             [req.user.id]
         );
-        if (result.rows.length === 0) {
-            return res.status(404).json({ error: "No hay productos en el carrito para eliminar" });
-        }
-        res.json({ message: "Carrito eliminado correctamente" });
+        // Si el carrito ya estaba vacío igual responde 200 — idempotente
+        res.json({ message: "Carrito vaciado correctamente" });
     } catch (err) {
-        res.status(500).json({ error: "Error eliminando productos del carrito" });
+        console.error("clearCart error:", err);
+        res.status(500).json({ error: "Error vaciando el carrito" });
     }
 };
 

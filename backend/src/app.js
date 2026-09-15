@@ -16,8 +16,6 @@ const uploadRoutes  = require("./routes/uploadRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ── Seguridad: headers HTTP ──
-app.use(helmet());
 
 // ── CORS ──
 const allowedOrigins = [

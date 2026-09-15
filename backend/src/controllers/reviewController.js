@@ -52,8 +52,8 @@ const deleteReview = async (req,res) => {
     }
     res.json({ message: "Reseña eliminada correctamente" });
   } catch (err) {
+    console.error("deleteReview error:", err);
     res.status(500).json({ error: "Error eliminando reseña" });
-     console.log(err);
   }
 };
 
