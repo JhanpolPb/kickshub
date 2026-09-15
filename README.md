@@ -53,7 +53,6 @@ E-commerce para una tienda de Sneakers Kickshub.co
 - Crear nuevos modulos
 - Dockerizar el proyecto
 - Kubernets
-- Desplegar el proyecto en un servicio en la nube
 - Mejorar backend con mas seguridad
 - Realizar y comercializar la pagina web
 - Permitir añadir tenis

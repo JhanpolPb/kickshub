@@ -17,7 +17,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
-// ── CORS ──
+app.use(helmet());
+
+
+
 const allowedOrigins = [
   "https://kickshub-frontend.onrender.com",
   ...(process.env.NODE_ENV !== "production"
@@ -28,7 +31,7 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Permitir requests sin origin (Postman, apps móviles, curl)
+
     if (!origin) return callback(null, true);
     if (allowedOrigins.includes(origin)) return callback(null, true);
     callback(new Error(`CORS bloqueado: ${origin}`));
@@ -36,25 +39,25 @@ app.use(cors({
   credentials: true,
 }));
 
-// ── Rate limiting global ──
+
 app.use(rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutos
-  max: 200,                  // max 200 requests por IP por ventana
+  windowMs: 15 * 60 * 1000, 
+  max: 200,                  
   standardHeaders: true,
   legacyHeaders: false,
   message: { error: "Demasiadas solicitudes, intenta más tarde" },
 }));
 
-// ── Rate limiting estricto para auth (anti fuerza bruta) ──
+
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutos
-  max: 10,                   // max 10 intentos de login/registro
+  windowMs: 15 * 60 * 1000, 
+  max: 10,                   
   message: { error: "Demasiados intentos, espera 15 minutos" },
 });
 
-app.use(express.json({ limit: "10kb" })); // Limitar tamaño del body
+app.use(express.json({ limit: "10kb" })); 
 
-// ── Health check ──
+
 app.get("/", (_req, res) => {
   res.json({
     message: "Bienvenido a KicksHub API",
@@ -63,7 +66,7 @@ app.get("/", (_req, res) => {
   });
 });
 
-// ── Rutas ──
+
 app.use("/api/products", productRoutes);
 app.use("/api/auth",     authLimiter, authRoutes);
 app.use("/api/users",    userRoutes);
@@ -72,7 +75,7 @@ app.use("/api/orders",   orderRoutes);
 app.use("/api/reviews",  reviewRoutes);
 app.use("/api/upload",   uploadRoutes);
 
-// ── Error handler global ──
+
 app.use((err, _req, res, _next) => {
   console.error(err.message);
   if (err.message.startsWith("CORS bloqueado")) {

@@ -9,7 +9,7 @@ export const metadata = {
     template: "%s | KicksHub",
   },
   description: "Los mejores sneakers en un solo lugar. Autenticidad garantizada.",
-  keywords: ["sneakers", "tenis", "nike", "adidas", "jordan", "kickshub"],
+  keywords: ["sneakers", "zapatos", "tenis", "nike", "adidas", "jordan", "kickshub"],
 };
 
 export default function RootLayout({ children }) {

@@ -5,7 +5,7 @@ export const metadata = {
   title: "KicksHub — Sneakers Auténticos",
 };
 
-const brands = ["Nike", "Adidas", "Jordan", "New Balance", "Louis Vuitton"];
+const brands = ["Nike", "Adidas", "Jordan", "New Balance", "Louis Vuitton", "Balenciaga"];
 
 const features = [
   {
